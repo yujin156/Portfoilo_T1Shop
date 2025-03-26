@@ -1,0 +1,76 @@
+/* 탑 헤더 ---------------------- */
+.Top_header { 
+    height: 40px;
+    line-height: 40px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid black;
+
+}
+.L_topHeader,
+.R_topHeader_1,
+.R_topHeader_2 {
+    color: red;
+    font-size: 15px; 
+
+}
+.R_topHeader {
+    gap: 15px; 
+}
+.R_topHeader_2{
+    display: none;
+}
+/* 메인 고정 헤더 ------------------------ */
+.main_Header_white {
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.L_mainHeader_white_nav,
+.R_mainHeader_white_nav {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+/* 질문 - 꼭 li에도 flax를 해야 할까요? 쌤? 이미 부모로 통해서 센터 맞춰 준거 같은디 */
+.L_mainHeader_white_nav > li,
+.R_mainHeader_white_nav > li {
+    display: flex;
+    align-items: center;
+}
+
+.L_mainHeader_white_nav img {
+    height: 35px;
+    width: auto;
+}
+
+.L_mainHeader_white_nav > li:nth-child(3),
+.L_mainHeader_white_nav > li:nth-child(4),
+.R_mainHeader_white_nav > li:nth-child(2){
+    position: relative;
+}
+
+.L_mainHeader_white_nav > li:nth-child(3) > ul,
+.L_mainHeader_white_nav > li:nth-child(4) > ul,
+.R_mainHeader_white_nav > li:nth-child(2) > ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.L_mainHeader_white_nav > li:hover ul,
+.R_mainHeader_white_nav > li:hover ul {
+    display: block;
+}
+
+
