@@ -19,10 +19,10 @@ a {
     margin: 0;
 } 
 iframe {
-    display: block;  /* 블록 요소로 변경해서 여백 제거 */
-    width: 100%;     /* 가로 너비 100% 유지 */
-    height: auto;    /* 높이는 콘텐츠에 맞게 자동 조절 */
-    border: none;    /* 테두리 제거 */
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
 
 }
 .content_box {
@@ -33,4 +33,7 @@ iframe {
     height: 100%;
     box-sizing: border-box;
     position: relative; 
+}
+.item_box{
+    
 }
