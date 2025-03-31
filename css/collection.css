@@ -1,0 +1,95 @@
+/* collection */
+.main_collection {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px; 
+}
+.lnk_box {
+    width: 380px;
+    height: 450px;
+    box-sizing: border-box;
+    
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    
+    /* 추가된 배경 이미지 기본 스타일 */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* 각 박스별 배경 이미지 */
+.teamkit_lnk {
+    background-image: url('../img/banner_img/main-collection_image06.png');
+}
+
+.basic_lnk {
+    background-image: url('../img/banner_img/main-collection_image02.jpeg');
+}
+
+.players_lnk {
+    background-image: url('../img/banner_img/main-collection_image03.jpeg');
+}
+
+.collection_lnk {
+    background-image: url('../img/banner_img/main-collection_image04.jpeg');
+}
+
+/* 각 반복되는 내용  */
+.lnk_box .title {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.lnk_box .text {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 25px;  
+}
+
+.lnk_box .icon {
+    position: absolute;  
+    bottom: 25px; 
+    right: 20px; 
+
+    transition: transform 0.3s ease; 
+}
+
+.lnk_box .icon img {
+    width: 85px; 
+    height: auto;
+}
+/* 호버 효과 */
+.lnk_box:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #ff0000;
+
+    transition: all 0.4s ease;
+}
+.lnk_box:hover {
+    background-size: 110%;
+}
+.lnk_box:hover:after {
+    width: 100%;
+    left: 0;
+}
+.lnk_box:hover .icon {
+    transform: translateX(10px);
+}

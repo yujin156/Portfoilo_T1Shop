@@ -1,0 +1,17 @@
+/* commuity */
+.main_commuity ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main_commuity li {
+    display: inline-block;
+}
+
+.main_commuity img {
+    width: 700px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}

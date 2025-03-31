@@ -39,7 +39,6 @@
     align-items: center;
     gap: 20px; 
 }
-/* 질문 - 꼭 li에도 flax를 해야 할까요? 쌤? 이미 부모로 통해서 센터 맞춰 준거 같은디 */
 .L_mainHeader_white_nav > li,
 .R_mainHeader_white_nav > li {
     display: flex;

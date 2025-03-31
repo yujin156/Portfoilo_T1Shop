@@ -2,37 +2,36 @@ body{
     background-color: #0b0b0b;
 
 }
-
-.main_collection,
-.main_unlform,
-.main_product,
-.main_commuity {
-    height: 400px;
+.main_collection_title,
+.main_unlform_title,
+.main_commuity_title,
+.main_review_title {
     position: relative;
-
+    margin-top: 40px;
+    margin-bottom: 30px;
+    height: 80px;
 }
 
-.main_collection span,
-.main_unlform span,
-.main_product span,
-.main_commuity span {
+.main_collection_title span,
+.main_unlform_title span,
+.main_commuity_title span,
+.main_review_title span {
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 50%;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
-    font-weight:bold ;
+    font-weight: bold;
     transform: translate(-50%, -50%);
-
-    z-index: 2; 
+    z-index: 2;
 }
 
 .postion_title {
     position: absolute;
-    top: 3%;
+    top: 20%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 35px;
+    font-size: 60px;
     color: rgba(255, 255, 255, 0.08);
     font-weight: 700;
     white-space: nowrap;
