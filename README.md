@@ -50,7 +50,6 @@ HTML, CSS, JavaScript를 활용해 **사이트 전반의 동작 원리**를 학�
 ---
 
 ## 📁 프로젝트 구조
-## 📁 프로젝트 구조
 
 ```text
 T1Shop/
@@ -107,7 +106,7 @@ T1Shop/
 ├─ package.json
 ├─ README.md
 └─ vite.config.js              # (선택) Vite 사용 시
-
+```
 ## 📦 설치 및 실행 방법
 
 ```bash
@@ -120,7 +119,7 @@ cd Portfoilo_T1Shop
 # 3. 브라우저로 index.html 실행
 # (또는 간단한 로컬 서버 실행)
 npx serve
-
+```
 ## ⚖️ 라이선스
 이 프로젝트는 학습 및 포트폴리오 목적의 개인 프로젝트입니다.
 상업적 사용을 금합니다.
