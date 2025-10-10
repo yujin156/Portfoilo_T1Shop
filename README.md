@@ -50,63 +50,63 @@ HTML, CSS, JavaScript를 활용해 **사이트 전반의 동작 원리**를 학�
 ---
 
 ## 📁 프로젝트 구조
+## 📁 프로젝트 구조
 
+```text
 T1Shop/
-├── public/                     # 배포 정적 리소스(파비콘, 공개 이미지 등)
-│   ├── favicon.ico
-│   └── robots.txt
-├── src/                        # 실제 소스
-│   ├── index.html              # 진입 HTML
-│   ├── assets/                 # 개발용 정적 리소스
-│   │   ├── images/
-│   │   ├── fonts/
-│   │   └── icons/
-│   ├── styles/                 # 스타일
-│   │   ├── base/               # reset, 변수, 공통 유틸
-│   │   │   ├── _reset.css
-│   │   │   └── _variables.css  # 색상/타이포 변수를 CSS 변수로
-│   │   ├── components/         # 컴포넌트별 스타일(헤더, 카드 등)
-│   │   │   └── product-card.css
-│   │   ├── pages/              # 페이지별 스타일
-│   │   │   ├── home.css
-│   │   │   └── product.css
-│   │   └── main.css            # 엔트리: 위 파일들을 @import
-│   ├── scripts/
-│   │   ├── core/               # 공용 모듈(네비, 스토리지, 유틸)
-│   │   │   ├── router.js       # (선택) 해시 라우팅
-│   │   │   ├── http.js         # fetch 래퍼(백엔드 붙일 준비)
-│   │   │   └── storage.js      # 장바구니 로컬스토리지 유틸
-│   │   ├── components/         # UI 컴포넌트(카드, 모달 등)
-│   │   │   └── ProductCard.js
-│   │   ├── pages/              # 페이지 스크립트
-│   │   │   ├── HomePage.js
-│   │   │   └── ProductPage.js
-│   │   └── main.js             # 진입 스크립트(이벤트 바인딩)
-│   ├── templates/              # (선택) HTML 조각(헤더/푸터 등)
-│   │   ├── header.html
-│   │   └── footer.html
-│   └── data/                   # (임시) 목업 JSON, 추후 API 대체
-│       └── products.json
-├── server/                     # (추가 예정) 백엔드
-│   ├── app.js                  # Express 진입점
-│   ├── routes/                 # 라우터
-│   │   └── products.route.js
-│   ├── controllers/            # 컨트롤러
-│   │   └── products.controller.js
-│   ├── models/                 # DB 모델(SQL 쿼리, DAO)
-│   │   └── products.model.js
-│   ├── services/               # 비즈니스 로직
-│   │   └── payment.service.js  # (추후) 카카오 결제 연동
-│   ├── middlewares/            # 에러핸들링, 인증 등
-│   └── config/
-│       ├── db.js               # DB 연결(예: MySQL)
-│       └── env.js              # 환경변수 로딩
-├── .env.example                # 필요한 환경변수 샘플(노출 X)
-├── package.json
-├── README.md
-└── vite.config.js              # (선택) Vite 사용 시
-
----
+├─ public/                     # 배포 정적 리소스(파비콘, 공개 이미지 등)
+│  ├─ favicon.ico
+│  └─ robots.txt
+├─ src/                        # 실제 소스
+│  ├─ index.html               # 진입 HTML
+│  ├─ assets/                  # 개발용 정적 리소스
+│  │  ├─ images/
+│  │  ├─ fonts/
+│  │  └─ icons/
+│  ├─ styles/                  # 스타일
+│  │  ├─ base/                 # reset, 변수, 공통 유틸
+│  │  │  ├─ _reset.css
+│  │  │  └─ _variables.css
+│  │  ├─ components/           # 컴포넌트별 스타일
+│  │  │  └─ product-card.css
+│  │  ├─ pages/                # 페이지별 스타일
+│  │  │  ├─ home.css
+│  │  │  └─ product.css
+│  │  └─ main.css              # 엔트리(@import 모음)
+│  ├─ scripts/
+│  │  ├─ core/                 # 공용 모듈(라우팅/HTTP/스토리지)
+│  │  │  ├─ router.js
+│  │  │  ├─ http.js
+│  │  │  └─ storage.js
+│  │  ├─ components/           # UI 컴포넌트
+│  │  │  └─ ProductCard.js
+│  │  ├─ pages/                # 페이지 스크립트
+│  │  │  ├─ HomePage.js
+│  │  │  └─ ProductPage.js
+│  │  └─ main.js               # 진입 스크립트(이벤트 바인딩)
+│  ├─ templates/               # (선택) 헤더/푸터 HTML 조각
+│  │  ├─ header.html
+│  │  └─ footer.html
+│  └─ data/                    # (임시) 목업 JSON, 추후 API 대체
+│     └─ products.json
+├─ server/                     # (추가 예정) 백엔드(Express)
+│  ├─ app.js                   # 서버 진입점
+│  ├─ routes/
+│  │  └─ products.route.js
+│  ├─ controllers/
+│  │  └─ products.controller.js
+│  ├─ models/                  # DB 모델(SQL/DAO)
+│  │  └─ products.model.js
+│  ├─ services/
+│  │  └─ payment.service.js    # (추후) 카카오 결제 연동
+│  ├─ middlewares/             # 에러핸들링/인증 등
+│  └─ config/
+│     ├─ db.js                 # DB 연결
+│     └─ env.js                # 환경변수 로딩
+├─ .env.example                # 환경변수 샘플(노출 X)
+├─ package.json
+├─ README.md
+└─ vite.config.js              # (선택) Vite 사용 시
 
 ## 📦 설치 및 실행 방법
 
