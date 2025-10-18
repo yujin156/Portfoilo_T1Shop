@@ -104,11 +104,15 @@ npx serve
 ---
 
 ##🎨 디자인 컨셉
-항목	내용
-🎨 Color Theme	#ff0000 (T1 레드), #0b0b0b, #181818
-🔠 Font	Bold한 Sans-serif 계열
-📐 Layout	Flexbox 중심, 반응형 확장 용이
-✨ Style Point	hover 트랜지션 / 레이어드 타이틀 디자인
+|항목	|내용 |
+|-------|-----|
+|🎨 Color Theme	|#ff0000 (T1 레드), #0b0b0b, #181818|
+|🔠 Font	|Bold한 Sans-serif 계열|
+|📐 Layout|	Flexbox 중심, 반응형 확장 용이|
+|✨ Style Point	|hover 트랜지션 / 레이어드 타이틀 디자인|
+
+---
+
 🧩 주요 섹션 스크린샷 (예시 자리)
 Collection	Uniform	Community
 
