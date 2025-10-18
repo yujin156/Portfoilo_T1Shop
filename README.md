@@ -85,8 +85,9 @@ T1Shop/
 ├── mp4/
 │   └── new-pc-video.mp4         # 메인 비디오 배너
 └── README.md                    # 프로젝트 문서
-</details>
+
 ```
+</details>
 ---
 ## 📦 실행 방법
 # 1️⃣ 리포지토리 클론
