@@ -25,7 +25,7 @@ HTML, CSS, JavaScript를 활용해 **사이트 전반의 동작 원리**를 학�
 | 구분 | 사용 기술 |
 |------|------------|
 | Frontend | HTML5, CSS3, JavaScript |
-| Backend | (예정) Node.js 또는 Express.js |
+| Backend |  |
 | Database | (예정) DBSQL |
 | Version Control | Git, GitHub |
 
