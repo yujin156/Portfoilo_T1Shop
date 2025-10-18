@@ -1,22 +1,18 @@
-# 🏪 T1Shop Develop
+<h1 align="center">🏪 T1Shop 디벨롭 (T1Shop Develop)</h1>
 
-> **T1Shop 디벨롭**은 기존의 T1Shop 웹사이트를 참고하여  
-> **프론트엔드와 백엔드 전반을 학습하기 위해 제작한 개인 포트폴리오 프로젝트**입니다.
-
----
-
-## 🧩 개발 목표
-> 실제 쇼핑몰의 구조를 분석하며 프론트엔드와 백엔드의 연동 과정을 학습
-> 기초적인 전자상거래 웹사이트의 동작 이해
-> 웹사이트 클론 코딩을 통한 디자인 및 코드 설계 능력 향상
+<p align="center">
+  <b>기존 <a href="https://shop.t1.gg" target="_blank">T1Shop</a> 사이트를 참고하여, 
+  프론트엔드와 백엔드 전반을 학습하기 위해 제작한 포트폴리오 프로젝트입니다.</b><br><br>
+  <img src="./img/banner_img/top_banner_pc.jpg" width="600" alt="T1Shop Banner"/>
+</p>
 
 ---
 
 ## 📚 프로젝트 개요
 
-이 프로젝트는 실제 상용 쇼핑몰 사이트인 **T1Shop**의 구조와 디자인을 참고하여  
-HTML, CSS, JavaScript를 활용해 **사이트 전반의 동작 원리**를 학습하고  
-향후 백엔드 및 데이터베이스(DBSQL)를 연동하여 기능을 확장하기 위한 목적으로 진행되었습니다.
+이 프로젝트는 실제 T1 공식몰의 구조와 디자인을 분석하여  
+HTML, CSS, JavaScript 중심으로 **웹사이트 프론트엔드 구현**을 연습하고,  
+추후 **DB 연동 및 카카오 결제 기능**을 추가하기 위한 학습형 클론 프로젝트입니다.
 
 ---
 
@@ -24,102 +20,106 @@ HTML, CSS, JavaScript를 활용해 **사이트 전반의 동작 원리**를 학�
 
 | 구분 | 사용 기술 |
 |------|------------|
-| Frontend | HTML5, CSS3, JavaScript |
-| Backend |  |
-| Database | (예정) DBSQL |
-| Version Control | Git, GitHub |
+| **Frontend** | HTML5, CSS3, JavaScript |
+| **Backend (예정)** | Node.js, Express |
+| **Database (예정)** | DBSQL |
+| **Version Control** | Git, GitHub |
+| **Deployment** | GitHub Pages |
+| **Design** | 직접 구조 설계 및 CSS 커스터마이징 |
 
 ---
 
 ## ✨ 주요 기능
 
-- 기존 **T1Shop 웹사이트 레이아웃 및 디자인 재현**  
-- HTML, CSS, JavaScript를 활용한 기본 UI/UX 구현  
-- 반응형 디자인 일부 적용  
-- 현재는 **프론트엔드 중심 구조**, 향후 백엔드 연동 예정  
+- 🖼️ **메인 페이지**
+  - 비디오 배너 + 섹션별 레이아웃 (COLLECTION / UNIFORM / COMMUNITY / REVIEW)
+- 🛍️ **SHOP 페이지**
+  - 상단 배너 + 카테고리 메뉴 구현  
+  - 상품 리스트 동적 생성 예정
+- 🧩 **공통 Header / Footer**
+  - 별도 HTML 파일로 구성  
+  - JS `fetch()`로 include 방식 전환 예정
+- ⚙️ **스타일 시스템**
+  - `basic.css` 기반 reset + 공통 규칙  
+  - hover 애니메이션과 transition 효과 포함
 
 ---
 
-## 🔮 추후 추가 예정 기능
+## 🔮 추후 개발 예정
 
-- 🧾 **카카오 결제 API 연동**  
-- 🗄️ DBSQL 기반 상품 / 사용자 데이터 관리 기능 추가  
-- 🧑‍💼 관리자 페이지 기능 개발  
-- 📱 완전한 반응형 디자인 개선  
+- 💳 카카오페이 결제 API 연동  
+- 🗄️ DBSQL 기반 상품/회원 관리  
+- 🧑‍💼 관리자 페이지 추가  
+- 📱 반응형 UI/UX 개선  
+- 🌐 Node.js 백엔드 서버 구축  
 
 ---
 
 ## 📁 프로젝트 구조
 
-```text
-T1Shop/
-├─ public/                     # 배포 정적 리소스(파비콘, 공개 이미지 등)
-│  ├─ favicon.ico
-│  └─ robots.txt
-├─ src/                        # 실제 소스
-│  ├─ index.html               # 진입 HTML
-│  ├─ assets/                  # 개발용 정적 리소스
-│  │  ├─ images/
-│  │  ├─ fonts/
-│  │  └─ icons/
-│  ├─ styles/                  # 스타일
-│  │  ├─ base/                 # reset, 변수, 공통 유틸
-│  │  │  ├─ _reset.css
-│  │  │  └─ _variables.css
-│  │  ├─ components/           # 컴포넌트별 스타일
-│  │  │  └─ product-card.css
-│  │  ├─ pages/                # 페이지별 스타일
-│  │  │  ├─ home.css
-│  │  │  └─ product.css
-│  │  └─ main.css              # 엔트리(@import 모음)
-│  ├─ scripts/
-│  │  ├─ core/                 # 공용 모듈(라우팅/HTTP/스토리지)
-│  │  │  ├─ router.js
-│  │  │  ├─ http.js
-│  │  │  └─ storage.js
-│  │  ├─ components/           # UI 컴포넌트
-│  │  │  └─ ProductCard.js
-│  │  ├─ pages/                # 페이지 스크립트
-│  │  │  ├─ HomePage.js
-│  │  │  └─ ProductPage.js
-│  │  └─ main.js               # 진입 스크립트(이벤트 바인딩)
-│  ├─ templates/               # (선택) 헤더/푸터 HTML 조각
-│  │  ├─ header.html
-│  │  └─ footer.html
-│  └─ data/                    # (임시) 목업 JSON, 추후 API 대체
-│     └─ products.json
-├─ server/                     # (추가 예정) 백엔드(Express)
-│  ├─ app.js                   # 서버 진입점
-│  ├─ routes/
-│  │  └─ products.route.js
-│  ├─ controllers/
-│  │  └─ products.controller.js
-│  ├─ models/                  # DB 모델(SQL/DAO)
-│  │  └─ products.model.js
-│  ├─ services/
-│  │  └─ payment.service.js    # (추후) 카카오 결제 연동
-│  ├─ middlewares/             # 에러핸들링/인증 등
-│  └─ config/
-│     ├─ db.js                 # DB 연결
-│     └─ env.js                # 환경변수 로딩
-├─ .env.example                # 환경변수 샘플(노출 X)
-├─ package.json
-├─ README.md
-└─ vite.config.js              # (선택) Vite 사용 시
-```
-## 📦 설치 및 실행 방법
+<details>
+<summary>📂 펼쳐보기</summary>
 
-```bash
-# 1. 리포지토리 클론
+  ```text
+T1Shop/
+├── html/
+│   ├── main.html                # 메인 페이지
+│   ├── shop.html                # 쇼핑 페이지
+│   ├── header.html              # 공통 헤더
+│   └── footer.html              # 공통 푸터
+├── css/
+│   ├── basic.css                # 공통 스타일 / reset
+│   ├── header.css               # 일반 헤더
+│   ├── mainHeader.css           # 메인 전용 투명 헤더
+│   ├── main.css                 # 메인 페이지 섹션 레이아웃
+│   ├── collection.css           # COLLECTION 섹션
+│   ├── uniform.css              # UNIFORM 섹션 (기존 unlform.css)
+│   ├── community.css            # COMMUNITY 섹션 (기존 commuity.css)
+│   ├── footer.css               # 푸터
+│   └── shop.css                 # SHOP 전용 스타일
+├── img/
+│   ├── banner_img/              # 배너 이미지
+│   ├── products/                # 상품 이미지
+│   ├── logo/                    # 로고 파일
+│   └── icon/                    # 아이콘 이미지
+├── mp4/
+│   └── new-pc-video.mp4         # 메인 비디오 배너
+└── README.md                    # 프로젝트 문서
+</details>
+```
+---
+## 📦 실행 방법
+# 1️⃣ 리포지토리 클론
 git clone https://github.com/yujin156/Portfoilo_T1Shop.git
 
-# 2. 프로젝트 폴더로 이동
+# 2️⃣ 프로젝트 폴더로 이동
 cd Portfoilo_T1Shop
 
-# 3. 브라우저로 index.html 실행
-# (또는 간단한 로컬 서버 실행)
+# 3️⃣ 로컬에서 실행 (VSCode Live Server 또는 serve 사용)
 npx serve
-```
-## ⚖️ 라이선스
+
+브라우저에서 👉 http://localhost:3000
+ 으로 접속하세요.
+---
+
+##🎨 디자인 컨셉
+항목	내용
+🎨 Color Theme	#ff0000 (T1 레드), #0b0b0b, #181818
+🔠 Font	Bold한 Sans-serif 계열
+📐 Layout	Flexbox 중심, 반응형 확장 용이
+✨ Style Point	hover 트랜지션 / 레이어드 타이틀 디자인
+🧩 주요 섹션 스크린샷 (예시 자리)
+Collection	Uniform	Community
+
+---
+	
+👩‍💻 개발자 정보
+항목	내용
+이름	유진 (Yujin)
+GitHub	@yujin156
+
+이메일 / 포트폴리오	(추가 예정)
+⚖️ 라이선스
+
 이 프로젝트는 학습 및 포트폴리오 목적의 개인 프로젝트입니다.
 상업적 사용을 금합니다.
