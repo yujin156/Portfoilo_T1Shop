@@ -1,15 +1,15 @@
-/* commuity */
-.main_commuity ul {
+/* community */
+.main_community ul {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.main_commuity li {
+.main_community li {
     display: inline-block;
 }
 
-.main_commuity img {
+.main_community img {
     width: 700px;
     height: auto;
     display: block;

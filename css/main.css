@@ -3,8 +3,8 @@ body{
 
 }
 .main_collection_title,
-.main_unlform_title,
-.main_commuity_title,
+.main_uniform_title,
+.main_community_title,
 .main_review_title {
     position: relative;
     margin-top: 40px;
@@ -13,8 +13,8 @@ body{
 }
 
 .main_collection_title span,
-.main_unlform_title span,
-.main_commuity_title span,
+.main_uniform_title span,
+.main_community_title span,
 .main_review_title span {
     position: absolute;
     top: 50%;
